@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Empire Solutions</title>
+    <style>
+        body {
+            background-color: rgb(3, 3, 3);
+            color: rgb(214, 209, 209);
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 400;
+        }
+
+        html {
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at bottom, rgba(255, 0, 0, 0.253), transparent 70%);
+        }
+
+        .home-text h1 {
+            margin-top: 10%;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 65px;
+            color: rgb(255, 56, 56);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
+            0 0 30px rgba(255, 0, 0, 0.315);
+        }
+
+        .home-text p {
+            font-size: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        strong {
+            font-weight: 400;
+            color: rgb(255, 56, 56);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.3),
+            0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        button {
+            height: 50px;
+            width: 120px;
+            background-color: transparent;
+            border-radius: 5px;
+            border: 1px solid rgb(218, 38, 38);
+            box-shadow: 0 0 15px rgba(255, 37, 37, 0.178);
+            text-shadow: 0 0 10px rgba(255, 0, 43, 0.226),
+            0 0 30px rgb(255, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: medium;
+            font-weight: 400;
+            color: rgb(255, 56, 56);
+            margin: 10px;
+            transition: transform 0.7s ease;
+        }
+
+        button:hover {
+            transform: scale(1.050);
+            cursor: pointer;
+        }
+
+        .sub-division {
+            margin-top: 50px;
+        }
+
+        .navbar {
+            border-radius: 9px;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: 500;
+            position: absolute;
+            left: 30px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #d3d2d2;
+            font-size: 18px;
+            font-weight: 400;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            transform: scale(1.2);
+            color: #df3030;
+            text-shadow: 0 0 10px rgba(255, 0, 43, 0.226),
+            0 0 30px rgb(255, 0, 0);
+        }
+
+        .navbar .logo a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            transition: color 0.5s ease;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .navbar .logo img:hover {
+            transform: scale(1.1);
+        }
+        
+        .links {
+            color: rgb(214, 209, 209);
+            text-decoration: none;
+            transition: color 0.5s ease, text-decoration 0.10s ease;
+        }
+
+        .links:hover {
+            text-decoration: underline;
+            color: rgb(241, 61, 61);
+            text-shadow: 0 0 10px rgba(255, 0, 43, 0.178),
+            0 0 30px rgba(255, 0, 0, 0.356);
+        }
+
+        .arrow {
+            margin-top: 45px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .line {
+            display: flex;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.411);
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.295), transparent 70%);
+        }
+
+        .content h1 {
+            font-weight: 300;
+            color: rgba(214, 209, 209, 0.829);
+            margin-top: 100px;
+            font-size: 40px;
+        }
+
+        .group-box {
+            display: inline-flex;
+            margin-top: 250px;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .box1 {
+            width: 395px;
+            height: 170px;
+            border: 1px solid rgba(255, 255, 255, 0.397);
+            border-radius: 9px;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+
+        .box1:hover {
+            transform: scale(1.010);
+        }
+
+        .box2 {
+            width: 395px;
+            height: 170px;
+            border: 1px solid rgba(255, 255, 255, 0.397);
+            border-radius: 9px;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+    
+        .box2:hover {
+            transform: scale(1.010);
+        }
+
+        .box3 {
+            width: 395px;
+            height: 170px;
+            border: 1px solid rgba(255, 255, 255, 0.397);
+            border-radius: 9px;
+            position: relative;
+            background-color: transparent;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+    
+        .box3:hover {
+            transform: scale(1.010);
+        }
+
+        .content h1 {
+            font-weight: 200;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.192);
+        }
+        
+        .test {
+            display: flex;
+            position: relative;
+            padding: 10px;
+            top: 4px;
+        }
+
+        .sub-box2 {
+            width: 100%;
+            height: 100%;
+            font-weight: 2300;
+        }
+
+        .sub-box2 h1 {
+            font-weight: 400;
+            margin-left: 30px;
+            text-align: center;
+            margin-top: -63px;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.192);
+        }
+
+        .sub-box2 p {
+            text-align: left;
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: 300;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.226);
+        }
+
+        .sub-box2 svg {
+            display: flexbox;
+            padding: 10px;
+        }
+
+        .sub-box1 {
+            width: 100%;
+            height: 100%;
+            font-weight: 200;
+        }
+
+        .sub-box1 h1 {
+            font-weight: 400;
+            margin-left: 30px;
+            text-align: center;
+            margin-top: -63px;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.192);
+        }
+
+        .sub-box1 p {
+            text-align: left;
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: 300;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.226);
+        }
+
+        .sub-box1 svg {
+            display: flexbox;
+            padding: 10px;
+        }
+
+        .sub-box3 {
+            width: 100%;
+            height: 100%;
+            font-weight: 200;
+        }
+
+        .sub-box3 h1 {
+            font-weight: 400;
+            margin-left: 30px;
+            text-align: center;
+            margin-top: -63px;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.192);
+        }
+
+        .sub-box3 p {
+            text-align: left;
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 17px;
+            font-weight: 300;
+            color: rgb(214, 209, 209);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
+            0 0 30px rgba(255, 255, 255, 0.226);
+        }
+
+        .sub-box3 svg {
+            display: flexbox;
+            padding: 10px;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/"><img src="/semfundo.png"></div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    <div class="home">
+        <div class="home-text">
+            <h1>Empire Solutions</h1>
+            <p>Digital solutions as <strong>you need them.</strong></p>
+            <div class="sub-division">
+                <a href="/"><button>Get Started </button></a> <a class="links" href="">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg></a>
+            </div>
+        </div>
+        <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg></div>
+    </div>
+    <div class="line"></div>
+    <div class="content">
+        <h1>Discover some of our features</h1>
+    </div>
+    <div class="group-box">
+        <div class="box2">
+            <div class="sub-box2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <h1>Advanced Security</h1>
+                    <p>State-of-the-art encryption and protection mechanisms.</p>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="sub-box1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                <h1>High Performance</h1>
+                <p>Optimized for speed and efficiency in all operations.</p>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="sub-box3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-eye"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1"/><path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0"/></svg>
+                <h1>Friendly Interface</h1>
+                <p>Intuitive design for seamless user experience.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
