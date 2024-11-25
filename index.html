@@ -7,14 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Empire Solutions</title>
     <style>
-        body {
+        body, html {
             background-color: rgb(3, 3, 3);
             color: rgb(214, 209, 209);
             font-family: 'Poppins', sans-serif; 
             font-weight: 400;
-        }
-
-        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
             scrollbar-width: none;
             scroll-behavior: smooth;
         }
@@ -387,6 +388,71 @@
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.226),
             0 0 30px rgba(255, 255, 255, 0.192);
         }
+
+        .footer {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 100px;
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.082), transparent 30%);
+        }
+
+        .footer h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .footer p {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .sub-footer {
+            display: flexbox;
+            padding: 35px;
+            margin-left: 75px;
+        }
+
+        .footer img {
+            display: flex;
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            padding: 25px;
+            margin: 0;
+            margin-left: 6px;
+            margin-top: 6px;
+        }
+
+        .links-footer {
+            display: inline-flex;
+            position: absolute;
+            margin-top: -33px;
+            margin-left: 67%;
+            gap: 20px;
+        }
+
+        .links-footer a {
+            color: white;
+            font-weight: 300;
+            text-decoration: none;
+            transition: color 0.5s ease, text-decoration 0.5s ease;
+        }
+
+        .links-footer a:hover {
+            color: rgb(238, 61, 61);
+            text-shadow: 0 0 10px rgba(248, 50, 50, 0.733),
+            0 0 30px rgba(255, 52, 52, 0.459);
+            text-decoration: underline;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.034);
+        }
         </style>
 </head>
 <body>
@@ -437,9 +503,24 @@
         </div>
     </div>
     <div class="line-end"></div>
-    <div class="end">
+    <div class="end" id="about">
         <h1>About Empire Solutions</h1>
         <p>We are dedicated to providing cutting-edge solutions for our users, ensuring security, performance, and reliability.</p>
+    </div>
+    <div class="footer">
+        <div class="footer-line"></div>
+        <img src="/semfundo.png">
+        <div class="sub-footer">
+            <h1>Empire Solutions</h1>
+            <p>Latenci.in</p>
+            <div class="links-footer">
+                <a href="">Home</a>
+                <a href="">Services</a>
+                <a href="">Discord</a>
+                <a href="">Login</a>
+            </div>
+            <p>© 2024 Empire Solutions Academy, a Latenci Company. All rights reserved.</p>
+        </div>
     </div>
 </body>
 </html>
